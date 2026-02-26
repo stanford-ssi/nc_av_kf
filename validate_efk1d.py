@@ -2,7 +2,6 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Import your modular EKF bits
 from ekf1d import EkfParams, DynamicsParams, make_ekf
 
 
@@ -21,7 +20,6 @@ def load_log028(path: str = "LOG028.TXT") -> pd.DataFrame:
         engine="python"
     )
 
-    # Strip whitespace from column names
     df.columns = df.columns.str.strip()
 
     print("Parsed columns in LOG028.TXT:")
@@ -183,11 +181,6 @@ def run_ekf_on_log028(
 
     print("Done. Close plot windows to exit.")
     plt.show()
-
-
-# ============================================================
-# 3) Main: choose params and run validation
-# ============================================================
 
 if __name__ == "__main__":
     # Gravity used by the EKF
