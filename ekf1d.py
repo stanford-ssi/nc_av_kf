@@ -368,7 +368,7 @@ if __name__ == "__main__":
         thrust_acc=20000.0,
         burn_time=0.5,
         drag_k=0.02
-    )
+    ) #Only for simulation
 
     sensor_params = SensorParams(
         accel_bias_true=0.3,     # true bias [m/s^2]
